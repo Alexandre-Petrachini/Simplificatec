@@ -1,0 +1,10 @@
+.modal.and.carousel {
+  position: fixed;
+  top: 10%;
+}
+.modal-content  {
+    border-radius: 11px ; 
+}
+.carousel-control {
+border-radius: 10px;
+}
