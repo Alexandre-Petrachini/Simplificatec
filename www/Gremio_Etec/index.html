@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+    <link rel="stylesheet" href="../fontes/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body style="font-family:Comic Sans MS;  ">
+    <div class="container">
+        <div class="row" id="loader" align="center">
+            <i class="fa fa-circle-o-notch fa-spin" id="spinner" aria-hidden="true"></i>
+        </div>
+        <div class="row" id="logo" align="center">
+            <img src="img\gremio.png" id="imggremio" class="img-responsive" alt="Grêmio Etec">
+        </div>
+        <div class="row" id="enviar" align="center">
+            <textarea id="font" class="form-control font" placeholder="Envie sugestões..."></textarea>
+        </div>
+        <div class="row" id="enviar" align="right">
+
+            
+                <i class="fa fa-microphone" aria-hidden="true" id="micro" onclick="Falar()"></i>
+            
+
+            <button type="button" onclick="ChamadaJSON(document.getElementById('font').value);"><i class="fa fa-check-circle" id="check" aria-hidden="true"></i></button>
+
+        </div>
+
+        <div id="espaco" style="height:2em"></div>
+
+
+        <script>
+            // Classe para chamar o Json.
+            function json() {
+                $('#resultado').html('Carregando dados...');
+                var qtd;
+                var retorno;
+                retorno = '';
+                // Resgatar valores.
+                json.prototype.resgatarValores = function() {
+                    $('#resultado').html('Carregando dados...');
+
+                    // Estrutura de resultado.
+                    $.getJSON('https://graph.facebook.com/v2.7/2137862236435867/events/attending/?fields=id,name,place,description,start_time&access_token=1662132043837879|uTYcsTw6z4kBzIzt0PLU_qSDpbs&since=1388534400', function(data) {
+                        this.qtd = data.data.length;
+                        this.retorno = '';
+
+                        for (i = 0; i < this.qtd; i++) {
+                            //converte a saida start_time do evento para formatos mais amigáveis
+                            var DiaHora = data.data[i].start_time;
+                            var diaAmericano = DiaHora.split("T");
+                            var diaBr = diaAmericano[0].split("-");
+                            diaBr = diaBr[2] + '/' + diaBr[1] + '/' + diaBr[0];
+                            var horaBr = diaAmericano[1].split("-");
+                            var horaBr = horaBr[0];
+                            //fim					
+
+                            this.retorno += '<div class="" style="font-size: 2.5vmax;">';
+                            this.retorno += '<a role="button" data-toggle="collapse" href="#collapseExample' + i + '" aria-expanded="false" aria-controls="collapseExample' + i + '">';
+                            this.retorno += '<div class="panel-heading"><h3><i class="fa fa-thumb-tack" aria-hidden="true"></i> ' + data.data[i].name + '</h3></div>';
+                            this.retorno += '</a><div class="collapse" id="collapseExample' + i + '">';
+                            this.retorno += '<div style="padding-right: 1.2em; padding-left: 1.2em">';
+                            this.retorno += '<ul class="list-group">';
+                            this.retorno += '<li class="list-group-item"><i class="fa fa-calendar-check-o" aria-hidden="true" style="color:#0c722b"></i> ';
+                            this.retorno += diaBr + ' - ' + horaBr;
+                            this.retorno += '</li>';
+                            this.retorno += '<li class="list-group-item"><i class="fa fa-map-marker" aria-hidden="true" style="color:#fc2d2d"></i> ';
+                            this.retorno += data.data[i].place.name;
+                            this.retorno += '</li>';  
+                            this.retorno += '<li class="list-group-item"><i class="fa fa-bullhorn" aria-hidden="true" style="color:#12025e"></i> ';
+                            this.retorno += data.data[i].description;
+                            this.retorno += '</li>';
+                            this.retorno += '<li class="list-group-item">';
+                            this.retorno += '<div align="right"><a href="whatsapp://send?text=' + data.data[i].name  + ', dia ' + diaBr + ' às ' + horaBr + ', local: ' + ' ' + data.data[i].place.name +  '. Evento: ' + data.data[i].description +'">';
+                            this.retorno += '<button type="button" class="btn btn-success" style="font-size: 2.5vmax;"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>';                            
+                            this.retorno += '</a></div>';
+                            this.retorno += '</li>';
+                            this.retorno += '</ul></div></div>';
+                            this.retorno += '</div><hr/>';
+                        }
+                        
+                        console.log(this.retorno);
+                        $('#resultado').html(this.retorno);
+                    });
+                }
+            }
+
+            // Objeto.
+            var obj = new json();
+            obj.resgatarValores();
+
+        </script>
+
+        <div id="resultado">
+            <div align="center">
+                <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="container-fluid">
+    <div class="row">
+        <div id="espaco" style="height:120px"></div>
+        <nav class="navbar navbar-default navbar-fixed-bottom" id="menu">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <ul>
+                        <li>
+                            <a href="../index.html"><i class="fa fa-home" id="renan" aria-hidden="true" style="font-size: 12vw;"></i></a>
+                        </li>
+                        <li>
+                            <i data-toggle="modal" data-target="#myModal" class="fa fa-question-circle" aria-hidden="true" id="btncentro" style="font-size: 12vw;"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Modal ajuda-->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" padding="100%">
+                        <h4 class="modal-title" style="font-size: 4vmax;">Ajuda <i class="fa fa-question-circle" aria-hidden="true"></i></h4>
+                    </div>
+                    <div class="modal-body">
+                        <h2 align="center">Seja bem vindo! </h2>
+                        <p style="font-size: 3vmax;">Envie-nos sugestões para a otimização dos serviços do grêmio!</p>
+                        <p style="font-size: 3vmax;">Os eventos que ocorrem na escola são listados por data.</p>
+                        <p align="center" style="font-size: 3vmax;">Aproveite!</p>
+                    </div>
+                    <div class="modal-footer" align="center">
+                        <button type="button" style="font-size: 3vmax;" class="btn btn-info" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fim do modal ajuda-->
+    </div>
+        </div>
+
+
+
+    <script>
+        /*
+                    Script mágico
+                */
+
+        // Resultados da Fala
+        function startRecognition() {
+            window.plugins.speechRecognition.startListening(function(result) {
+                // Show results in the console
+                document.getElementById('font').value = result;
+                // alert('Você falou: ' + result);                                        
+            }, function(err) {
+                console.error(err);
+            }, {
+                language: "pt-BR",
+                showPopup: true
+            });
+        }
+
+        function Falar() {
+            console.log('iniciando o speech recognation')
+            window.plugins.speechRecognition.isRecognitionAvailable(function(available) {
+                if (!available) {
+                    console.log("Permissão negada!");
+                }
+
+                // Check if has permission to use the microphone
+                window.plugins.speechRecognition.hasPermission(function(isGranted) {
+                    if (isGranted) {
+                        startRecognition(); // inicia o reconhecimento da fala
+                    } else {
+                        // Request the permission
+                        window.plugins.speechRecognition.requestPermission(function() {
+                            startRecognition(); // inicia o reconhecimento da fala
+                        }, function(err) {
+                            console.log(err);
+                        });
+                    }
+                }, function(err) {
+                    console.log(err);
+                });
+            }, function(err) {
+                console.log(err);
+            });
+        }
+
+    </script>
+
+    <script type="text/javascript" src="js/load.js"></script>
+    <script src="../JQuery/jquery.min.js"></script>
+    <script src="../bootstrap/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/inserir.js" type="text/javascript"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+
+
+</body>
+
+</html>
