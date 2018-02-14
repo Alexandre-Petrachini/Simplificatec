@@ -1,0 +1,27 @@
+#selecionardt {
+  background-image: linear-gradient(to bottom, #db6767, #e0d9d9, white);
+  padding: 2%;
+  box-shadow: 2px 2px black;
+  border-radius: 5% 5%;
+  border: 1px ridge black; }
+
+#btnconsulta {
+  margin-top: 1vh;
+  font-size: 3.5vmax !important;
+  width: 100% !important;
+  outline: none;
+  text-shadow: 2px 2px black; }
+
+#data {
+  font-size: 3.5vmax;
+  outline: none;
+  border: 1px solid black;
+  width: 100%; }
+
+label {
+  font-size: 3.5vmax;
+  color: white;
+  text-shadow: 2px 2px black;
+  float: left; }
+
+/*# sourceMappingURL=selecionar_data.css.map */

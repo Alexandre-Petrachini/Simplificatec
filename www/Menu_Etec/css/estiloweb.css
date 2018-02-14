@@ -1,0 +1,63 @@
+#loader {
+  position: absolute;
+  padding-top: 40vh;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 2; }
+  #loader #spinner {
+    font-size: 13vmax;
+    color: red; }
+
+img {
+  width: 20vw;
+  height: auto;
+  margin: 30vh 0;
+  position: fixed; }
+
+#ajuda {
+  margin-top: 5vh;
+  position: fixed;
+  cursor: pointer;
+  font-size: 150%; }
+
+#mainweb {
+  background-image: linear-gradient(to top, #ad9191, gray);
+  font-size: 4vmax; }
+  #mainweb .listaweb {
+    padding: 1vw;
+    /*Inputs do form*/ }
+    #mainweb .listaweb .itensweb {
+      padding: 1% 0;
+      width: 100%;
+      margin: 0 0 1.5%;
+      background-image: linear-gradient(to left, #e0d9d9, white);
+      border-radius: 5px;
+      font: 50% "Lobster", cursive;
+      list-style-type: none;
+      border: 1px ridge black; }
+    #mainweb .listaweb #cafe11, #mainweb .listaweb #lanche11, #mainweb .listaweb #almoco11, #mainweb .listaweb #lanchen11 {
+      background-color: white;
+      border: 1px ridge black;
+      margin: -2% 0 2%;
+      font-family: "Corben", cursive;
+      display: block; }
+    #mainweb .listaweb #c, #mainweb .listaweb #l, #mainweb .listaweb #a, #mainweb .listaweb #ln {
+      font-size: 50%; }
+  #mainweb textarea {
+    resize: none;
+    width: 90%; }
+  #mainweb #datta {
+    font-size: 60%;
+    width: 100%; }
+  #mainweb #cadastro {
+    width: 100% !important;
+    font: 0.5em "Corben", cursive;
+    text-shadow: 2px 2px black;
+    cursor: pointer; }
+
+/*# sourceMappingURL=estiloweb.css.map */

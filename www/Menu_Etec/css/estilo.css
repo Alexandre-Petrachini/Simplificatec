@@ -1,0 +1,106 @@
+#main {
+  background-image: linear-gradient(to top, #ad9191, gray);
+  font-size: 4vmax; }
+  #main .lista {
+    padding: 1vw; }
+    #main .lista .itens {
+      padding: 1vw 0;
+      width: 100%;
+      margin: 0 0 1.5vh;
+      background-image: linear-gradient(to left, #e0d9d9, white);
+      border-radius: 5px;
+      font: 100% "Lobster", cursive;
+      list-style-type: none;
+      border: 1px ridge black; }
+      #main .lista .itens #coffee, #main .lista .itens #snack, #main .lista .itens #lunch, #main .lista .itens #snack2 {
+        display: none; }
+    #main .lista #cafe1, #main .lista #lanche1, #main .lista #almoco1, #main .lista #lanchen1 {
+      background-color: white;
+      border: 1px ridge black;
+      margin: -2vh 0 2vh;
+      font-family: "Corben", cursive;
+      display: none; }
+
+.modal-header, .modal-footer {
+  background-color: #cc0000;
+  color: white;
+  text-shadow: 2px 2px black; }
+  .modal-header .modal-title, .modal-footer .modal-title {
+    font-size: 5vmax; }
+
+.modal-body {
+  text-align: left;
+  font-size: 3vmax; }
+
+.modal-footer {
+  font-size: 4vmax; }
+
+#menu {
+  font-size: 5.5vmax;
+  background-image: linear-gradient(to left, #e0d9d9, white);
+  border: 1px solid black;
+  color: black;
+  text-align: center; }
+  #menu li {
+    list-style: none;
+    display: inline;
+    padding: 0 10vw 0; }
+  #menu a, #menu a:active {
+    color: black; }
+
+#loader {
+  position: absolute;
+  padding-top: 40vh;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 2; }
+  #loader #spinner {
+    font-size: 13vmax;
+    color: red; }
+
+#selecionardt {
+  background-image: linear-gradient(to bottom, #db6767, #e0d9d9, white);
+  padding: 2%;
+  box-shadow: 2px 2px black;
+  border-radius: 5% 5%;
+  border: 1px ridge black; }
+
+#btnconsulta {
+  margin-top: 1vh;
+  font-size: 3.5vmax !important;
+  width: 100% !important;
+  outline: none;
+  text-shadow: 2px 2px black; }
+
+#data {
+  font-size: 3.5vmax;
+  outline: none;
+  border: 1px solid black;
+  width: 100%; }
+
+label {
+  font-size: 3.5vmax;
+  color: white;
+  text-shadow: 2px 2px black;
+  float: left; }
+
+img {
+  height: auto;
+  width: 60vw;
+  margin-bottom: 3vh; }
+
+.btn {
+  font-size: 0.8em !important; }
+
+html {
+  margin-bottom: 10vh; }
+
+@media (orientation: landscape) {
+  transform: rotate(-90deg); }
+
+/*# sourceMappingURL=estilo.css.map */

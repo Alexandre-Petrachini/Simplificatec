@@ -1,0 +1,20 @@
+@import 'lista';
+@import 'modalhelp';
+@import 'menu';
+@import 'spinner';
+@import 'selecionar_data';
+
+img{
+	height: auto;
+	width: 60vw;
+	margin-bottom: 3vh;
+}
+.btn{
+	font-size: 0.8em !important;
+}
+html{
+	margin-bottom: 10vh;
+}
+@media (orientation: landscape){
+	    transform: rotate(-90deg);
+}

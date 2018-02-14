@@ -1,0 +1,51 @@
+$fonte-itens: 'Lobster', cursive;
+$fonte-conteudo: 'Corben', cursive;
+$icones: none;
+$border-itens: 1px ridge black;
+
+#main{
+	background-image: linear-gradient(to top, #ad9191, gray);
+	font-size: 4vmax;
+	
+	.lista{
+		padding: 1vw;
+			.itens{
+				padding: 1vw 0;
+				width: 100%;
+				margin: 0 0 1.5vh;
+				background-image: linear-gradient(to left, #e0d9d9, white);
+				border-radius: 5px;
+				font: 100% $fonte-itens;
+				list-style-type: none;
+				border: $border-itens;
+					#coffee{
+						display: $icones;
+					}
+					#snack{
+						@extend #coffee;
+					}
+					#lunch{
+						@extend #coffee;
+					}
+					#snack2{
+						@extend #coffee;
+					}
+			}
+			#cafe1{
+				background-color: white;
+				border: $border-itens;
+				margin: -2vh 0 2vh;
+				font-family: $fonte-conteudo;
+				display: none;
+			}
+			#lanche1{
+				@extend #cafe1;
+			}
+			#almoco1{
+				@extend #cafe1;	
+			}
+			#lanchen1{
+				@extend #cafe1;
+			}
+}
+}

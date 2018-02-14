@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap/css/bootstrap-theme.min.css">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Corben|Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="../fontes/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" media="all">
+    <link rel="shortcut icon" href="img/outApp.png">
+  </head>
+  <body>
+    <div class="container" align="center">
+      <div class="row" id="loader" align="center">
+        <i class="fa fa-circle-o-notch fa-spin" id="spinner" aria-hidden="true"></i>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <img src="img/logo2.png" class="img-responsive" alt="Menu Etec"/>
+        </div>
+      </div>
+		<div class="row" id="selecionardt">
+		  <strong><label for="data">Escolha uma data: </label></strong>
+          <input type="date" id="data" autofocus><br/>
+          <button type="button" class="btn btn-danger" id="btnconsulta" onclick="ChamadaJSON(document.getElementById('data').value);" >Consultar</button>
+		</div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default" id="main">
+            <div class="panel-body">
+              <ul class="lista">
+                <li id="cafe" class="itens">Café da Manhã  <i class="fa fa-coffee" id="coffee" aria-hidden="true"></i></li>
+                <div id="cafe1"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+                <li id="lanche" class="itens">Lanche (manhã) <span class="glyphicon glyphicon-apple" id="snack" aria-hidden="true"></span></li>
+                <div id="lanche1"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+                <li id="almoco" class="itens">Almoço <span class="glyphicon glyphicon-cutlery" id="lunch" aria-hidden="true"></span></li>
+                <div id="almoco1"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+                <li id="lanchen" class="itens">Lanche (noite)  <span class="glyphicon glyphicon-apple" id="snack2" aria-hidden="true"></span></li>
+                <div id="lanchen1"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h3 class="modal-title" id="myModalLabel"><strong>Ajuda</strong></h3>
+            </div>
+            <div class="modal-body">
+              <p>Bem vindo ao Menu Etec!
+              </p>
+              <p align="justify">Para usar:<br>
+              <ol>
+                <li>Escolha uma data;</li>
+                <li>Clique em "Consultar".</li>
+                <li>Caso deseje uma visualização mais limpa, você pode ocultar o prato clicando na refeição (em cinza claro).</li>
+              </ol>
+              </p><br>
+              <strong>
+                <p>Para voltar à página inicial: <i class="fa fa-home" aria-hidden="true"></i></p>
+              </strong>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal"><strong>Entendi</strong></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <nav class="navbar navbar-default navbar-fixed-bottom" id="menu">
+          <ul>
+            <li class="col-md-6">
+              <a href="../index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+            </li>
+            <li class="col-md-6">
+              <i data-toggle="modal" data-target="#myModal" class="fa fa-question-circle" aria-hidden="true" id="btncentro"></i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--Div do container-->
+    <script src="../JQuery/jquery.min.js"></script>   
+    <script src="../bootstrap/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/icone.js"></script>
+    <script type="text/javascript" src="js/load.js"></script>
+    <script type="text/javascript" src="js/selecionar.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+  </body>
+</html>

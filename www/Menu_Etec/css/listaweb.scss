@@ -1,0 +1,65 @@
+$fonte-itens: 'Lobster', cursive;
+$fonte-conteudo: 'Corben', cursive;
+$border-itens: 1px ridge black;
+
+#mainweb{
+	background-image: linear-gradient(to top, #ad9191, gray);
+	font-size: 4vmax;
+	
+	.listaweb{
+		padding: 1vw;
+			.itensweb{
+				padding: 1% 0;
+				width: 100%;
+				margin: 0 0 1.5%;
+				background-image: linear-gradient(to left, #e0d9d9, white);
+				border-radius: 5px;
+				font: 50% $fonte-itens;
+				list-style-type: none;
+				border: $border-itens;
+			}
+			#cafe11{
+				background-color: white;
+				border: $border-itens;
+				margin: -2% 0 2%;
+				font-family: $fonte-conteudo;
+				display: block;
+			}
+			#lanche11{
+				@extend #cafe11;
+			}
+			#almoco11{
+				@extend #cafe11;	
+			}
+			#lanchen11{
+				@extend #cafe11;
+			}
+			/*Inputs do form*/
+			#c{
+				font-size: 50%;
+			}
+			#l{
+				@extend #c;
+			}
+			#a{
+				@extend #c;
+			}
+			#ln{
+				@extend #c;
+			}
+	}
+	textarea{
+		resize: none;
+		width: 90%;
+	}
+	#datta{
+		font-size: 60%;
+		width: 100%;
+	}
+	#cadastro{
+		width: 100% !important;
+		font: 0.5em $fonte-conteudo;
+		text-shadow: 2px 2px black;
+		cursor: pointer;
+	}
+}

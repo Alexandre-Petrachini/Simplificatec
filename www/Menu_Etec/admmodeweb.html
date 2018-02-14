@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../bootstrap/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../bootstrap/bootstrap/css/bootstrap-theme.min.css">
+	<title>Home</title>
+	<link href="https://fonts.googleapis.com/css?family=Corben|Lobster" rel="stylesheet">
+	<link rel="stylesheet" href="../fontes/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estiloweb.css" media="all">
+	<link rel="shortcut icon" href="img/outApp.png"> </head>
+<body>
+	<div class="container">
+			<div class="row">
+					<div role="main" class="col-md-8 col-md-push-4">
+
+									<div class="panel panel-default" id="mainweb">
+										<div class="panel-body">
+											<div id="dia1">
+												<input type="date" required class="form-control" id="datta" autofocus></div>
+											<ul class="listaweb">
+												<li id="cafe" class="itensweb">Café da Manhã <i class="fa fa-coffee" aria-hidden="true"></i> </li>
+												<div id="cafe11">
+													<textarea id="c" required placeholder="Digite o café da manhã"></textarea>
+												</div>
+												<li id="lanche" class="itensweb">Lanche (manhã) <span class="glyphicon glyphicon-apple" aria-hidden="true"></span> </li>
+												<div id="lanche11">
+													<textarea id="l" required placeholder="Digite o lanche da manhã"></textarea>
+												</div>
+												<li id="almoco" class="itensweb">Almoço <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> </li>
+												<div id="almoco11">
+													<textarea id="a" required placeholder="Digite o almoço"></textarea>
+												</div>
+												<li id="lanchen" class="itensweb">Lanche (noite) <span class="glyphicon glyphicon-apple" aria-hidden="true"></span> </li>
+												<div id="lanchen11">
+													<textarea id="ln" placeholder="Digite o lanche da noite" required></textarea>
+												</div>
+													<button type="button" class="btn btn-danger" id="cadastro" onclick="ChamadaJSON(document.getElementById('c').value, document.getElementById('l').value, document.getElementById('a').value, document.getElementById('ln').value, document.getElementById('datta').value)">Cadastrar</button>
+											</ul>
+										</div>
+									</div>
+								</div>
+					<aside role="complementary" class="col-md-4 col-md-pull-8">
+					<button type="button" class="btn btn-danger" style="width: 100%;"  data-toggle="modal" data-target="#myModal"><strong>AJUDA <i class="fa fa-question-circle" aria-hidden="true"></i></strong></button>
+							<img class="img-responsive" src="img/logo2.png" alt="Menu Etec">
+					</aside>
+					<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">AJUDA</h4>
+      </div>
+      <div class="modal-body">
+        Preencha os dados corretamente e clique em cadastrar.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+			</div>
+	</div>
+	<script src="../jquery/jquery.min.js"></script>
+	<script src="../bootstrap/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/inserir.js"></script>
+	<script type="text/javascript" src="js/load.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAC,GAAG;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,MAAM;EACd,QAAQ,EAAE,KAAK;;AAEhB,MAAM;EACL,UAAU,EAAE,GAAG;EACf,QAAQ,EAAE,KAAK;EACf,MAAM,EAAE,OAAO;EACf,SAAS,EAAE,IAAI",
+"sources": ["side.scss"],
+"names": [],
+"file": "side.css"
+}

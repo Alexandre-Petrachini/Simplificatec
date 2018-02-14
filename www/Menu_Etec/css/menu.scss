@@ -1,0 +1,20 @@
+$cor-btn: black;
+
+#menu{
+	font-size: 5.5vmax;
+	background-image: linear-gradient(to left, #e0d9d9, white);
+	border: 1px solid black;
+	color: $cor-btn;
+	text-align: center;
+	li{
+		list-style: none;
+		display: inline;
+		padding: 0 10vw 0;
+	}
+	a{
+		color: $cor-btn;
+	}
+	a:active{
+		@extend a;
+	}
+}

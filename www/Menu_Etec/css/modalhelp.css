@@ -1,0 +1,15 @@
+.modal-header, .modal-footer {
+  background-color: #cc0000;
+  color: white;
+  text-shadow: 2px 2px black; }
+  .modal-header .modal-title, .modal-footer .modal-title {
+    font-size: 5vmax; }
+
+.modal-body {
+  text-align: left;
+  font-size: 3vmax; }
+
+.modal-footer {
+  font-size: 4vmax; }
+
+/*# sourceMappingURL=modalhelp.css.map */

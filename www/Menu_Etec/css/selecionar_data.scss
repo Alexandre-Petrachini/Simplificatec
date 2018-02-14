@@ -1,0 +1,29 @@
+$fonte: 3.5vmax;
+$shadow: 2px 2px black;
+
+#selecionardt{
+	background-image: linear-gradient(to bottom, #db6767, #e0d9d9, white);
+	padding: 2%;
+	box-shadow: $shadow;
+	border-radius: 5% 5%;
+	border: 1px ridge black;
+}
+#btnconsulta{
+	margin-top: 1vh;
+	font-size: $fonte !important;
+	width: 100% !important;
+	outline: none;
+	text-shadow: 2px 2px black;
+}
+#data{
+	font-size: $fonte;
+	outline: none;
+	border: 1px solid black;
+	width: 100%;
+}
+label{
+	font-size: $fonte;
+	color: white;
+	text-shadow: $shadow;
+	float: left;
+}

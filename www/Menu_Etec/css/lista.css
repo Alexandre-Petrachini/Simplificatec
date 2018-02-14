@@ -1,0 +1,24 @@
+#main {
+  background-image: linear-gradient(to top, #ad9191, gray);
+  font-size: 4vmax; }
+  #main .lista {
+    padding: 1vw; }
+    #main .lista .itens {
+      padding: 1vw 0;
+      width: 100%;
+      margin: 0 0 1.5vh;
+      background-image: linear-gradient(to left, #e0d9d9, white);
+      border-radius: 5px;
+      font: 100% "Lobster", cursive;
+      list-style-type: none;
+      border: 1px ridge black; }
+      #main .lista .itens #coffee, #main .lista .itens #snack, #main .lista .itens #lunch, #main .lista .itens #snack2 {
+        display: none; }
+    #main .lista #cafe1, #main .lista #lanche1, #main .lista #almoco1, #main .lista #lanchen1 {
+      background-color: white;
+      border: 1px ridge black;
+      margin: -2vh 0 2vh;
+      font-family: "Corben", cursive;
+      display: none; }
+
+/*# sourceMappingURL=lista.css.map */

@@ -1,0 +1,14 @@
+#menu {
+  font-size: 5.5vmax;
+  background-image: linear-gradient(to left, #e0d9d9, white);
+  border: 1px solid black;
+  color: black;
+  text-align: center; }
+  #menu li {
+    list-style: none;
+    display: inline;
+    padding: 0 10vw 0; }
+  #menu a, #menu a:active {
+    color: black; }
+
+/*# sourceMappingURL=menu.css.map */

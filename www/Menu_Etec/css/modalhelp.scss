@@ -1,0 +1,16 @@
+.modal-header{
+	background-color: #cc0000;
+	color: white;
+	text-shadow: 2px 2px black;
+	.modal-title{
+		font-size: 5vmax;
+	}
+}
+.modal-body{
+	text-align: left;
+	font-size: 3vmax;
+}
+.modal-footer{
+	@extend .modal-header;
+	font-size: 4vmax;
+}

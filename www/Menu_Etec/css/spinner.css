@@ -1,0 +1,16 @@
+#loader {
+  position: absolute;
+  padding-top: 40vh;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 2; }
+  #loader #spinner {
+    font-size: 13vmax;
+    color: red; }
+
+/*# sourceMappingURL=spinner.css.map */
